@@ -14,6 +14,9 @@ function getReciever(message: Message, changeState: (user_id: number) => void) {
 
     if (message.forward_from.id === message.from!.id) return bot.sendMessage(message.from!.id, 'Нельзя самому себе отправлять валентинки!')
     if (message.forward_from.id === 279603779) return bot.sendMessage(message.from!.id, 'Этот пользователь не принимает валентинки.')
+    if (message.forward_from.is_bot) return bot.sendMessage(message.from!.id, 'К сожалению, боты не нуждаются в валентинках.')
+
+    
     bot.sendMessage(message.from!.id, 'Отлично! Теперь ты можешь отправить сообщение, которое нужно доставить этому пользователю!')
     changeState(message.forward_from.id)
 }
