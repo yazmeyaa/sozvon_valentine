@@ -1,4 +1,4 @@
-import { bot } from "index";
+import { bot } from "../index";
 import { Message } from "node-telegram-bot-api";
 
 function alreadySendedMessage(message: Message) {

@@ -1,10 +1,9 @@
 import dotenv from 'dotenv'
 import TelegramBot from 'node-telegram-bot-api'
 import { createConnection } from 'mysql2'
-import { MessagesFromDB } from 'types/message'
-import { MessageController } from 'messageController'
-import { getUserMessages } from 'helpers/sql'
-import { UserState } from 'types/userState'
+import { MessageController } from './messageController'
+import { getUserMessages } from './helpers/sql'
+import { UserState } from './types/userState'
 
 dotenv.config()
 

@@ -1,4 +1,4 @@
-import { bot, usersState } from "index";
+import { bot } from "../index";
 import { Message } from "node-telegram-bot-api";
 
 function getReciever(message: Message, changeState: (user_id: number) => void) {

@@ -1,5 +1,5 @@
-import { getMessagesFromUser } from "helpers/sql";
-import { bot, db, usersState } from "index";
+import { getMessagesFromUser } from "../helpers/sql";
+import { bot, db, usersState } from "../index";
 import { Message } from "node-telegram-bot-api";
 
 async function sendMessageToReciever(message: Message, reciever: number, changeState: (user_id: number) => void) {

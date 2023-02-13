@@ -1,9 +1,9 @@
-import { alreadySendedMessage } from "handlers/alreadySendedMessage";
-import { getReciever } from "handlers/getReciever";
-import { sendMessageToReciever } from "handlers/sendMessageToReciever";
-import { usersState } from "index";
+import { alreadySendedMessage } from "./handlers/alreadySendedMessage";
+import { getReciever } from "./handlers/getReciever";
+import { sendMessageToReciever } from "./handlers/sendMessageToReciever";
+import { usersState } from "./index";
 import { Message } from "node-telegram-bot-api";
-import { UserState } from "types/userState";
+import { UserState } from "./types/userState";
 
 const commands = ['/start', '/check_valentines', '/get_valentine']
 

@@ -1,5 +1,5 @@
-import { db } from "index"
-import { MessagesFromDB } from "types/message"
+import { db } from "../index"
+import { MessagesFromDB } from "../types/message"
 
 export const getUserMessages: (user_id: number) => Promise<MessagesFromDB> = (user_id: number) => new Promise((resolve, reject) => {
     db.query<MessagesFromDB>('SELECT * FROM Message WHERE to_user_id = ? AND recieved=0;', [user_id], (err, messages) => {
